@@ -1,0 +1,56 @@
+:root {
+  --blur-amount: 10px;
+}
+
+.yt-focus-hoverable {
+  position: relative;
+  border: 2px dashed #3b82f6 !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.yt-focus-remove-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #ef4444;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.yt-focus-blurred {
+  filter: blur(var(--blur-amount));
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.yt-focus-blurred:hover {
+  filter: blur(0);
+  opacity: 1;
+}
+
+.yt-focus-hidden {
+  display: none !important;
+}
+
+/* Add styles for different modes */
+.study-mode .yt-focus-hoverable {
+  border-color: #ef4444 !important;
+}
+
+.entertainment-mode .yt-focus-hoverable {
+  border-color: #10b981 !important;
+}
+
+/* Add animation for undo */
+@keyframes restore {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.yt-focus-restored {
+  animation: restore 0.3s ease;
+} 
