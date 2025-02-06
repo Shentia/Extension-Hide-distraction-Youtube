@@ -27,10 +27,11 @@ YouTube Focus Mode is a Chrome extension designed to help you stay focused by mi
   - `Delete`: Remove element
   - `Ctrl + Z`: Undo remove
   - `Ctrl + Shift + F`: Toggle focus mode
- 
-  
-![3](https://github.com/user-attachments/assets/d19d5e08-a4ad-4b4d-9bb1-b682292c700a)
-![1](https://github.com/user-attachments/assets/ca0a3e35-d1f2-463f-932b-322dee558472)
+
+<div style="display: flex; gap: 10px;">
+  <img src="https://github.com/user-attachments/assets/d19d5e08-a4ad-4b4d-9bb1-b682292c700a" alt="Screenshot 1" width="300" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+  <img src="https://github.com/user-attachments/assets/ca0a3e35-d1f2-463f-932b-322dee558472" alt="Screenshot 2" width="300" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+</div>
 
 ## Support
 
