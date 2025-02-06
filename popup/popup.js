@@ -59,8 +59,28 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function sendMessageToContent(message) {
+async function ensureContentScript() {
+  return new Promise((resolve) => {
+    chrome.runtime.sendMessage({type: 'checkContentScript'}, (response) => {
+      if (response?.status === 'ready') {
+        resolve(true);
+      } else {
+        resolve(false);
+      }
+    });
+  });
+}
+
+async function sendMessageToContent(message) {
+  const isReady = await ensureContentScript();
+  if (!isReady) {
+    console.error('Content script not ready');
+    return;
+  }
+
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.sendMessage(tabs[0].id, message);
+    if (tabs[0]) {
+      chrome.tabs.sendMessage(tabs[0].id, message);
+    }
   });
 } 

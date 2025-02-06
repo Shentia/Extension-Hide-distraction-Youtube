@@ -5,7 +5,8 @@
   "description": "Remove distracting elements from YouTube for better focus",
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "scripting"
   ],
   "host_permissions": [
     "https://*.youtube.com/*"

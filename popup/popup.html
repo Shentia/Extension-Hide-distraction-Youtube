@@ -323,6 +323,37 @@
       width: 16px;
       height: 16px;
     }
+
+    .support-section {
+      margin-top: 2px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .support-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--surface-700);
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .support-link:hover {
+      color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .coffee-icon {
+      width: 20px;
+      height: 20px;
+      color: #ff813f;
+    }
   </style>
 </head>
 <body>
@@ -414,6 +445,16 @@
         <span class="stat-label">Most Hidden</span>
         <div id="mostHidden" class="stat-value">None</div>
       </div>
+    </div>
+
+    <!-- Add this section before the closing </div> of the container -->
+    <div class="support-section">
+      <a href="https://www.buymeacoffee.com/yourusername" target="_blank" class="support-link">
+        <svg class="coffee-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20 3H4v10a4 4 0 004 4h6a4 4 0 004-4v-3h2a2 2 0 002-2V5a2 2 0 00-2-2zm0 5h-2V5h2zM4 19h16v2H4z"/>
+        </svg>
+        <span>Support this extension</span>
+      </a>
     </div>
   </div>
 

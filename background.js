@@ -31,4 +31,21 @@ chrome.commands.onCommand.addListener((command) => {
       });
     });
   }
+});
+
+// Add this to handle popup messages
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.type === 'checkContentScript') {
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+      if (tabs[0]) {
+        chrome.scripting.executeScript({
+          target: {tabId: tabs[0].id},
+          files: ['content.js']
+        }, () => {
+          sendResponse({status: 'ready'});
+        });
+      }
+    });
+    return true; // Keep the message channel open for async response
+  }
 }); 
