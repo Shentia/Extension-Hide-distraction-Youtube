@@ -2,6 +2,9 @@
 
 YouTube Focus Mode is a Chrome extension designed to help you stay focused by minimizing distractions on YouTube. It allows you to customize your viewing experience by hiding or blurring distracting elements.
 
+## Demo
+Try it now on [Chrome Web Store](https://chromewebstore.google.com/detail/youtube-focus-mode/londpemondjmdpiefnpkcpogcladaibf?hl=en-US&utm_source=ext_sidebar)
+
 ## Features
 
 - **Focus Mode Toggle:** Easily switch focus mode on or off to control distractions.
@@ -14,6 +17,9 @@ YouTube Focus Mode is a Chrome extension designed to help you stay focused by mi
 
 ## Installation
 
+1. Install directly from [Chrome Web Store](https://chromewebstore.google.com/detail/youtube-focus-mode/londpemondjmdpiefnpkcpogcladaibf?hl=en-US&utm_source=ext_sidebar)
+
+Or manually:
 1. Clone or download the repository.
 2. Open Chrome and navigate to `chrome://extensions/`.
 3. Enable "Developer mode" in the top right corner.
